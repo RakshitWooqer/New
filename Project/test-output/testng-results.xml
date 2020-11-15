@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="18912" started-at="2020-11-14T17:15:54Z" finished-at="2020-11-14T17:16:13Z">
+    <groups>
+      <group name="Cucumber">
+        <method signature="TestNGRunner.scenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:stepDefination.TestNGRunner@68bbe345]" name="scenario" class="stepDefination.TestNGRunner"/>
+      </group> <!-- Cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="18912" started-at="2020-11-14T17:15:54Z" finished-at="2020-11-14T17:16:13Z">
+      <class name="stepDefination.TestNGRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:stepDefination.TestNGRunner@68bbe345]" name="setUpClass" is-config="true" duration-ms="216" started-at="2020-11-14T17:15:54Z" finished-at="2020-11-14T17:15:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="scenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:stepDefination.TestNGRunner@68bbe345]" name="scenario" duration-ms="18244" started-at="2020-11-14T17:15:55Z" description="Runs Cucumber Feature" data-provider="scenarios" finished-at="2020-11-14T17:16:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Tuto"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:stepDefination.TestNGRunner@68bbe345]" name="tearDownClass" is-config="true" duration-ms="356" started-at="2020-11-14T17:16:13Z" finished-at="2020-11-14T17:16:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- stepDefination.TestNGRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
