@@ -72,5 +72,72 @@ public class Talk_steps {
 		Thread.sleep(2000);
 	}
 
+	@When("^User clicks on the comment button on the talk assigned")
+	public void commentTalk() {
+		Talk talk=new Talk(talk1.driver);
+		talk.TalkComment().click();
+	}
+	
+	@When("^User commnets on the talk")
+	public void commenttalk() {
+		Talk talk=new Talk(talk1.driver);
+		talk.EnterTalkcomment().sendKeys("Comment on talk");
+	}
+	
+	@When("^User clicks on the comment button at the bottom section to enter comment on the talk")
+	public void commentBTN() {
+		Talk talk=new Talk(talk1.driver);
+		talk.ClickCommentBTN().click();
+	}
+	
+	@When("^User clicks on the Endore button and endorse the talk")
+	public void clickendorse() {
+		Talk talk=new Talk(talk1.driver);
+		talk.clickOnEndorse().click();
+	}
+	
+	@When("^User clicks on the conclude button")
+	public void clickconclude() {
+		Talk talk=new Talk(talk1.driver);
+		talk.clickOnConclude().click();
+	}
+	
+	@When("^User conclude the task with the comment")
+	public void commentconclude() {
+		Talk talk=new Talk(talk1.driver);
+		talk.concludeTalkBoxclick().click();
+	}
+	
+	@When("^User enters the conclude message")
+	public void commconclude() {
+		Talk talk=new Talk(talk1.driver);
+		talk.concludemsg1().sendKeys("conclude the talk");
+	}
+	
+	@When("^User clicks on the conclude button at the bottom of the conclude section")
+	public void clicksconclude() {
+		Talk talk=new Talk(talk1.driver);
+		talk.concludeTalk().click();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }

@@ -54,8 +54,8 @@ public class Talk {
 	}
 	
 	
-	public void TalkComment() {
-	   driver.findElement(By.xpath("//textarea[@class='comment-for-talk-textarea comment-textarea']")).click();
+	public WebElement TalkComment() {
+	   return driver.findElement(By.xpath("//textarea[@class='comment-for-talk-textarea comment-textarea']"));
 		
 	}
 	
@@ -63,21 +63,21 @@ public class Talk {
 		return driver.findElement(By.xpath("//textarea[@class='comment-for-talk-textarea comment-textarea']"));
 		
 	}
-	public void ClickCommentBTN() {
-		driver.findElement(By.xpath("//button[@class='comment-talk-button add-comment-button'][1]")).click();
+	public WebElement ClickCommentBTN() {
+		return driver.findElement(By.xpath("//button[@class='comment-talk-button add-comment-button'][1]"));
 	
 	}
 	
-	public void clickOnEndorse() {
-		driver.findElement(By.xpath("//span[text()=' Endorse']")).click();
+	public WebElement clickOnEndorse() {
+		return driver.findElement(By.xpath("//span[text()=' Endorse']"));
 	}
 	
-	public void clickOnConclude() {
-		driver.findElement(By.xpath("//span[text()=' Conclude']")).click();
+	public WebElement clickOnConclude() {
+		return driver.findElement(By.xpath("//span[text()=' Conclude']"));
 	}
 	
-	public void concludeTalkBoxclick() {
-		driver.findElement(By.xpath("//textarea[@class='comment-for-talk-textarea conclude-comment-textarea']"));
+	public WebElement concludeTalkBoxclick() {
+		return driver.findElement(By.xpath("//textarea[@class='comment-for-talk-textarea conclude-comment-textarea']"));
 	}
 	
 	public WebElement concludemsg1() {
@@ -85,8 +85,8 @@ public class Talk {
 		
 	}
 	
-	public void concludeTalk() {
-		driver.findElement(By.xpath("//button[text()='Conclude']")).click();
+	public WebElement concludeTalk() {
+		return driver.findElement(By.xpath("//button[text()='Conclude']"));
 	}
 	
 	public void everyone() {

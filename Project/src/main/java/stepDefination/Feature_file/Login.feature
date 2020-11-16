@@ -10,3 +10,4 @@ Scenario:
 	And User enters the password
 	And User clicks on the signin button
 	And User verify the homepage tittle to check whether login is working or not
+	
