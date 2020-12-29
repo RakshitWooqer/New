@@ -26,6 +26,7 @@ public class Login_steps
 	@Given("^I am on tuto homepage$")
 	public void goToTuto() {
 		driver.get("https://tuto.wooqer.com");
+		
 	}
 	
 	@When("^User enters the username")
