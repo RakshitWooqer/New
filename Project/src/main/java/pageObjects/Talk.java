@@ -10,7 +10,7 @@ public class Talk {
 	public Talk(WebDriver driver) {
 		this.driver = driver;
 	}
-
+	
    public WebElement TalkBtn() {
 	   return driver.findElement(By.xpath("//div[@id='h_talk']"));
 	   
@@ -46,11 +46,11 @@ public class Talk {
 		
 	}
 	public WebElement usernameBTN() {
-		return driver.findElement(By.xpath("//input[@id='username']"));
+		return driver.findElement(By.xpath("//input[@id='j_username']"));
 	}
 	
 	public WebElement passwordBTN() {
-		return driver.findElement(By.xpath("//input[@id='password']"));
+		return driver.findElement(By.xpath("//input[@id='j_password']"));
 	}
 	
 	

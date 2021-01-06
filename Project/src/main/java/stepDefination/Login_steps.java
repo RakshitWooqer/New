@@ -18,14 +18,14 @@ public class Login_steps
 	public static WebDriver driver;
 	
 	@Before public void setup() {
-		System.setProperty("webdriver.chrome.driver", "C:/Users/wooqer-pc/Downloads/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "F:/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 				}
 	
 	@Given("^I am on tuto homepage$")
 	public void goToTuto() {
-		driver.get("https://tuto.wooqer.com");
+		driver.get("https://qa.wooqer.com");
 		
 	}
 	
@@ -38,7 +38,7 @@ public class Login_steps
 	@When("^User enters the password")
 	public void enterpassword() throws InterruptedException {
 		Login login = new Login(driver);
-		login.passwordBTN().sendKeys("Wooqer@1234");
+		login.passwordBTN().sendKeys("Wooqer@123");
 		Thread.sleep(2000);
 		
 	}
@@ -52,7 +52,7 @@ public class Login_steps
 	public void homepage() {
 		Login login= new Login(driver);
 		String title = login.HomepageTitle().getText();
-		System.out.println(title);
+		System.out.println(title + " is Visible, Login succesfull");
 	
 }
 }

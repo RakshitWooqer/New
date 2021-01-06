@@ -19,7 +19,7 @@ import io.cucumber.testng.TestNGCucumberRunner;
 
 @CucumberOptions(
 
-		features= {".//src/main/java/stepDefination/Feature_file/Login.feature"},
+		features= {".//src/main/java/stepDefination/Feature_file/DCProcess.feature"},
 
 glue = {"stepDefination"},
 

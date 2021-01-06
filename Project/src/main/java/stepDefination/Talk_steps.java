@@ -6,6 +6,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import pageObjects.CreateUser;
 import pageObjects.Login;
 import pageObjects.Talk;
 import io.cucumber.java.en.Then;
@@ -13,6 +14,7 @@ import org.openqa.selenium.By;
 
 public class Talk_steps {
 	Login_steps talk1 = new Login_steps();
+	CreateUser CS =new CreateUser(talk1.driver);
 	
 	@When("^User click on the Talk Button")
 	public void clickTalkButton() {
@@ -22,7 +24,7 @@ public class Talk_steps {
 	@When("^User enter the text on the talk page")
 	public void talkText() {
 		Talk talk=new Talk(talk1.driver);
-		talk.TalkText().sendKeys("test talk");
+		talk.TalkText().sendKeys("test talk" + CS.getCurrentTimeStamp());
 	}
 	
 	@When("^User click on the share with field and enters the user details")
@@ -45,6 +47,12 @@ public class Talk_steps {
 	public void talkShareOption() {
 		Talk talk=new Talk(talk1.driver);
 		talk.TalkShareField().click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	@When("^User click on the profile icon")
@@ -68,7 +76,7 @@ public class Talk_steps {
 	@When("^User enters the password the above mentioned user")
 	public void enterpassBTN() throws InterruptedException {
 		Talk talk=new Talk(talk1.driver);
-		talk.passwordBTN().sendKeys("Wooqer@1234");
+		talk.passwordBTN().sendKeys("Wooqer@123");
 		Thread.sleep(2000);
 	}
 
