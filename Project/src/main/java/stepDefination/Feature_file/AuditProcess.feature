@@ -77,7 +77,7 @@ Scenario:
 	And User click n submit button to submit
 	
 		@Tuto
-	#Scenario2 User Login from Admin and to check Process report
+	#Scenario3 User Login from Admin and to check Process report
 Scenario:
 	When User enters the Nimish username
 	And User enters the Nimish password

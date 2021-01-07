@@ -241,8 +241,7 @@ public class ProcessCreation {
    public static void Assign_to_User() {
 	 
 	   try {
-		  
-	      WebElement table = driver.findElement(By.id("listTable"));
+		  WebElement table = driver.findElement(By.id("listTable"));
 		  List<WebElement> Rows=table.findElements(By.tagName("tr"));
 		  System.out.println(Rows.size());
 		  for(int i=6;i<7;i++) {
