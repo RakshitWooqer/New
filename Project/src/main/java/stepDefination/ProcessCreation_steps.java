@@ -58,8 +58,9 @@ public class ProcessCreation_steps
 			PC.Process_name().sendKeys(PC.ProcessName);
 	}
 	@When("^User click on continue button")
-	public void Process_continueBtn() {
+	public void Process_continueBtn()  {
 		PC.Process_continueBtn().click();
+		
 	}
 	@When("^User enters Process process objective")
 	public void processobjective() {
@@ -88,8 +89,9 @@ public class ProcessCreation_steps
 		PC.MultipleRecords().click();
 	}
 	@When("^User save the process details")
-	public void ProcessDetails_save() {
+	public void ProcessDetails_save() throws Exception {
 		PC.ProcessDetails_save().click();
+		Thread.sleep(8000);
 	}
 	
 	@When("^User click on Add new Task Audit")
@@ -113,8 +115,9 @@ public class ProcessCreation_steps
 		PC.select_Addanother().click();
 	}
 	@When("^User click on save question")
-	public void Save_question_Btn() {
+	public void Save_question_Btn() throws InterruptedException {
 		PC.Save_question_Btn().click();
+		Thread.sleep(4000);
 	}
 	@When("^User selects short type")
 	public void Select_shortQues() {
@@ -202,7 +205,7 @@ public class ProcessCreation_steps
 	public void Add_DCMCMAOptions() {
 		PC.Option_1().sendKeys("MCMA 1");
 		PC.Option_2().sendKeys("MCMA 2");
-		PC.Option_3().sendKeys("MCMA 2");
+		PC.Option_3().sendKeys("MCMA 3");
 	}
 
 	@When("^User click on Process save button")
@@ -215,8 +218,9 @@ public class ProcessCreation_steps
 	}
 	
 	@When("^User search for the assignee")
-	public void enter_search_bar() {
+	public void enter_search_bar() throws InterruptedException {
 		ProcessCreation.enter_search_bar("//input[@id='searchString']", "Gourav Chourasiya");
+		Thread.sleep(5000);
 	}
 	@When("^User click on assign for searched user")
 	public void Assign_to_user() {
@@ -235,8 +239,9 @@ public class ProcessCreation_steps
 		PC.coveragedone().click();
 	}
 	@When("^User search for created process")
-	public void enter_Processsearch_bar() {
+	public void enter_Processsearch_bar() throws InterruptedException {
 		ProcessCreation.enter_search_bar("//input[@id='searchString']", PC.ProcessName);
+		Thread.sleep(5000);
 	}
 	@When("^User click on change to activate process")
 	public void select_Change_btn() {
@@ -245,7 +250,7 @@ public class ProcessCreation_steps
 	@When("^User click on back to process")
 	public void click_backToProcess() {
 		PC.click_backToProcess().click();
-		PC.waitfor(5000);
+		
 	
 	}
 	

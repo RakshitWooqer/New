@@ -1,13 +1,13 @@
 Feature: Tuto
 
 Background: User navigates to Tuto
-	Given  I am on tuto homepage
+	Given  I am on QA homepage
 	
 	@Tuto
 	#Scenario User creates a talk with one user
 Scenario:
-	When User enters the username
-	And User enters the password
+	When User enters the Nimish username
+	And User enters the Nimish password
 	And User clicks on the signin button
 	And User go to the content page
 	And User go to the process tab
@@ -19,7 +19,6 @@ Scenario:
 	And User selects city as coverage
 	And User open list coverages
 	And User selects All coverage and done
-	And User selects has_cutoff
 	And User selects MultipleRecords
 	And User save the process details
 	And User click on Add new Task Audit
@@ -57,6 +56,35 @@ Scenario:
 	And User click on back to process
 	And User search for created process
 	And User click on change to activate process
+	
+	
+	@Tuto
+	#Scenario2 User Login from Asignee and fill the process
+Scenario:
+	When User enters the Gourav username
+	And User enters the Gourav password
+	And User clicks on the signin button
+	And User go to the todo page
+	And User click on process in todo
+	And User click on Star button for DC process in todo
+	And User Fill the 1st score answer
+	And User Fill the 1st short answer
+	And User Fill the 1st Description answer
+	And User select options for 1st Rating
+	And User Fill the MCSA1 answer
+	And User Fill the MCMA1 answer
+	And User Fill the MCMA2 answer
+	And User click n submit button to submit
+	
+		@Tuto
+	#Scenario2 User Login from Admin and to check Process report
+Scenario:
+	When User enters the Nimish username
+	And User enters the Nimish password
+	And User clicks on the signin button
+	And User click on Reports tab
+	And User click on Process in Reports tab
+	And User search for the process in reports
 	
 	
 	

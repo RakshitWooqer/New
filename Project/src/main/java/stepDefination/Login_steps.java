@@ -23,20 +23,33 @@ public class Login_steps
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 				}
 	
-	@Given("^I am on tuto homepage$")
+	@Given("^I am on QA homepage$")
 	public void goToTuto() {
 		driver.get("https://qa.wooqer.com");
 		
 	}
 	
-	@When("^User enters the username")
-	public void clickusername() throws InterruptedException {
+	@When("^User enters the Nimish username")
+	public void clickusernameNimish() throws InterruptedException {
 		Login login = new Login(driver);
 		login.usernameBTN().sendKeys("nimish@wooqer.com");
 	}
 	
-	@When("^User enters the password")
-	public void enterpassword() throws InterruptedException {
+	@When("^User enters the Nimish password")
+	public void enterpasswordNimish() throws InterruptedException {
+		Login login = new Login(driver);
+		login.passwordBTN().sendKeys("Wooqer@123");
+		Thread.sleep(2000);
+		
+	}
+	@When("^User enters the Gourav username")
+	public void clickusernameGourav() throws InterruptedException {
+		Login login = new Login(driver);
+		login.usernameBTN().sendKeys("Gourav@wooqer.com");
+	}
+	
+	@When("^User enters the Gourav password")
+	public void enterpasswordGourav() throws InterruptedException {
 		Login login = new Login(driver);
 		login.passwordBTN().sendKeys("Wooqer@123");
 		Thread.sleep(2000);

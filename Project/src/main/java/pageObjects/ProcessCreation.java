@@ -1,6 +1,7 @@
 package pageObjects;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -15,17 +16,17 @@ import stepDefination.Login_steps;
 
 public class ProcessCreation {
 	public static String ProcessName;
+	
 	public static WebDriver driver = null;
 	public ProcessCreation(WebDriver driver) {
 		this.driver = driver;
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
 	}
-	public static void waitfor(int x) {
-		try {
-			Thread.sleep(x);
-		} catch (InterruptedException e) {
-		}
+	
+  
 		
-	}
+		
+	
    public WebElement ContentTab() {
 	
 	   return driver.findElement(By.xpath("//*[@id='contentTabLink']/a"));
@@ -107,19 +108,19 @@ public class ProcessCreation {
    }
    public WebElement ProcessDetails_save() {
 		
-	   waitfor(10000);
+	
 	   return driver.findElement(By.id("evalSubmitButton"));
    }
    public WebElement Add_newtaskAudit_Btn() {
-	     waitfor(3000);
+	     
 		 return driver.findElement(By.xpath("//a[text()='Add New Question']"));
    }
    public WebElement Add_newtaskDC_Btn() {
-	     waitfor(3000);
+	     
 		 return driver.findElement(By.xpath("//a[text()='Add New Task']"));
  }
    public WebElement Add_QuestionTitle() {
-	      waitfor(3000);
+	     
 		 return driver.findElement(By.id("question"));
    }
    public WebElement select_Addanother() {
@@ -134,33 +135,33 @@ public class ProcessCreation {
 		 s.selectByVisibleText("Score");
    }
    public void Select_shortQues() {
-	   waitfor(5000);
+	  
 	   Select s=new Select(driver.findElement(By.xpath("//select[@id='thisone']")));
 		 s.selectByVisibleText("Short Answer");
    }
    public void Select_DescriptiveQues() {
-	   waitfor(3000);
+	   
 	   Select s=new Select(driver.findElement(By.xpath("//select[@id='thisone']")));
 		 s.selectByVisibleText("Descriptive Answer");
    }
    public void Select_RatingQues() {
-	   waitfor(3000);
+	   
 	   Select s=new Select(driver.findElement(By.xpath("//select[@id='thisone']")));
 		 s.selectByVisibleText("Rating");
    }
    public void Select_MCSA() {
-	   waitfor(3000);
+	   
 	   Select s=new Select(driver.findElement(By.xpath("//select[@id='thisone']")));
 		 s.selectByVisibleText("Multiple Choice Single Answer");
    }
    public void Select_MCMA() {
-	   waitfor(5000);
+	   
 	   Select s=new Select(driver.findElement(By.xpath("//select[@id='thisone']")));
 		 s.selectByVisibleText("Multiple Choice Multiple Answers");
    }
    
    public WebElement Addmore_option() {
-	   waitfor(3000);
+	  
 	   return driver.findElement(By.id("id:addMore"));
    }
    public WebElement Option_1() {
@@ -196,19 +197,19 @@ public class ProcessCreation {
 	   return driver.findElement(By.id("answer4Weight"));
    }
    public WebElement AreaShouldrated_1() {
-	   waitfor(3000);
+	   
 	   return driver.findElement(By.xpath("//div[@id='elementsArrayTable']/div[1]/input"));
    }
    public WebElement AreaShouldrated_2() {
-	   waitfor(3000);
+	   
 	   return driver.findElement(By.xpath("//div[@id='elementsArrayTable']/div[2]/input"));
    }
    public WebElement Process_save_Btn() {
-	   waitfor(5000);
+	  
 	   return driver.findElement(By.id("doneEval"));
    }
    public static void Click_on_Assign() {
-	   waitfor(3000);
+	   
 		  try {
 		  WebDriverWait wait=new WebDriverWait(driver, 1000);
 	      WebElement table = driver.findElement(By.id("listTable"));
@@ -238,7 +239,7 @@ public class ProcessCreation {
 	    		  
 	 }	  
    public static void Assign_to_User() {
-	   waitfor(3000);
+	 
 	   try {
 		  
 	      WebElement table = driver.findElement(By.id("listTable"));
@@ -263,13 +264,13 @@ public class ProcessCreation {
 		 return driver.findElement(By.xpath("//a[@class='pink-anchor shareCheckAll'][contains(.,'Check all')]"));
    }
 	
-   public  WebElement select_Change_btn() {
-	   waitfor(5000);
+   public  WebElement select_Change_btn()  {
+	      
 		 return driver.findElement(By.xpath("//*[text()='change']"));
    }
    
    public  WebElement click_backToProcess() {
-	   waitfor(5000);
+	  
 		 return driver.findElement(By.xpath("//a[contains(text(),'<<   Back to process list')]"));
    }
 

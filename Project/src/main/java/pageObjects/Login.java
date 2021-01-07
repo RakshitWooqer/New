@@ -14,11 +14,11 @@ public class Login{
 	}
 	
 	public WebElement usernameBTN() {
-		return driver.findElement(By.xpath("//input[@id='username']"));
+		return driver.findElement(By.xpath("//input[@id='j_username']"));
 	}
 	
 	public WebElement passwordBTN() {
-		return driver.findElement(By.xpath("//input[@id='password']"));
+		return driver.findElement(By.xpath("//input[@id='j_password']"));
 	}
 	
 	public void loginclk() {
