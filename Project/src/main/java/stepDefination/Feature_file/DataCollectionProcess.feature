@@ -4,7 +4,7 @@ Background: User navigates to Tuto
 	Given  I am on QA homepage
 	
 	@Tuto
-	#Scenario User creates Datacollection process and assign to Another user
+	#Scenario User creates a Data Collection process with Daily periodicity and assign to another user
 Scenario:
 	When User enters the Nimish username
 	And User enters the Nimish password
@@ -58,7 +58,7 @@ Scenario:
 	And User click on change to activate process
 	
 	@Tuto
-	#Scenario2 User Login from Asignee and fill the process
+	#Scenario2 User Login from Assignee and fill the process with Daily periodicity
 Scenario:
 	When User enters the Gourav username
 	And User enters the Gourav password
@@ -75,14 +75,6 @@ Scenario:
 	And User Fill the MCMA2 answer
 	And User click n submit button to submit
 	
-		@Tuto
-	#Scenario2 User Login from Admin and to check Process report
-Scenario:
-	When User enters the Nimish username
-	And User enters the Nimish password
-	And User clicks on the signin button
-	And User click on Reports tab
-	And User click on Process in Reports tab
-	And User search for the process in reports
+
 	
 	

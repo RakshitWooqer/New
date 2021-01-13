@@ -35,7 +35,7 @@ Scenario:
 	And User selects rating type
 	And User Add Rating question title
 	And User Add Rating Area should be rated
-	And User Add Audit Rating Options and weightag
+	And User Add Audit Rating Options and weightage
 	And User click on save question
 	And User selects MCSA type
 	And User Add MCSA question title
@@ -66,7 +66,7 @@ Scenario:
 	And User clicks on the signin button
 	And User go to the todo page
 	And User click on process in todo
-	And User click on Star button for DC process in todo
+	And User click on Star button for Audit process in todo
 	And User Fill the 1st score answer
 	And User Fill the 1st short answer
 	And User Fill the 1st Description answer
@@ -76,15 +76,7 @@ Scenario:
 	And User Fill the MCMA2 answer
 	And User click n submit button to submit
 	
-		@Tuto
-	#Scenario3 User Login from Admin and to check Process report
-Scenario:
-	When User enters the Nimish username
-	And User enters the Nimish password
-	And User clicks on the signin button
-	And User click on Reports tab
-	And User click on Process in Reports tab
-	And User search for the process in reports
+		
 	
 	
 	

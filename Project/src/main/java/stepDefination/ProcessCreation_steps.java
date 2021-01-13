@@ -1,6 +1,8 @@
 package stepDefination;
 
 import java.io.InterruptedIOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -80,6 +82,65 @@ public class ProcessCreation_steps
 		PC.SelectCoverage().click();
 		PC.coveragedone().click();
 	}
+	@When("^User selects single periodicity")
+	public void Select_Single_periodicity() {
+		PC.Select_Single_periodicity();
+		
+	}
+	@When("^User selects Weekly periodicity")
+	public void Select_Weekly_periodicity() {
+		PC.Select_Weekly_periodicity();
+		
+	}
+	@When("^User selects Monthly periodicity")
+	public void Select_Monthly_periodicity() {
+		PC.Select_Monthly_periodicity();
+		
+	}
+	@When("^User selects Quaterly periodicity")
+	public void Select_QUaterly_periodicity() {
+		PC.Select_Quarterly_periodicity();
+		
+	}
+	@When("^User selects Halfannually periodicity")
+	public void Select_Halfannually_periodicity() {
+		PC.Select_Halfannually_periodicity();
+		
+	}
+	@When("^User selects Annually periodicity")
+	public void Select_Annually_periodicity() {
+		PC.Select_Annually_periodicity();
+		
+	}
+	@When("^User selects Cyclic periodicity")
+	public void Select_Cyclic_periodicity() {
+		PC.Select_Cyclic_periodicity();
+		
+		
+	}
+	@When("^User enters Cyclic duration as 3")
+	public void enter_Cyclic_Duration() {
+		
+		PC.Enter_Cyclic_Duration().sendKeys("3");
+		
+		
+	}
+	@When("^User enters start date as today")
+	public void enter_Cyclic_Duration_startdate() {
+		
+		
+		Date dt = new Date();
+		String CurrentDate = new SimpleDateFormat("MM/dd/yyyy").format(dt);
+		PC.Enter_Cyclic_StartDate().sendKeys(CurrentDate);
+		
+	}
+	@When("^User enters Cyclic lable as 1")
+	public void enter_Cyclic_lable() throws InterruptedException {
+		Thread.sleep(3000);
+		PC.Enter_Cyclic_lable().sendKeys("1");
+		
+		
+	}
 	@When("^User selects has_cutoff")
 	public void Has_A_Cutoff() {
 		PC.Has_A_Cutoff().click();
@@ -90,6 +151,7 @@ public class ProcessCreation_steps
 	}
 	@When("^User save the process details")
 	public void ProcessDetails_save() throws Exception {
+	
 		PC.ProcessDetails_save().click();
 		Thread.sleep(8000);
 	}
@@ -111,8 +173,9 @@ public class ProcessCreation_steps
 		PC.Add_QuestionTitle().sendKeys("Score type question");
 	}
 	@When("^User select Add another option")
-	public void select_Addanother() {
+	public void select_Addanother() throws InterruptedException {
 		PC.select_Addanother().click();
+		Thread.sleep(4000);
 	}
 	@When("^User click on save question")
 	public void Save_question_Btn() throws InterruptedException {

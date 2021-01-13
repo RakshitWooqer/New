@@ -91,7 +91,44 @@ public class ProcessCreation {
    public WebElement coveragedone() {
 		 return driver.findElement(By.xpath("//input[@value='Done']"));
    }
-   
+
+   public WebElement Select_Single_periodicity() {
+	   return driver.findElement(By.id("frequency2"));
+	
+   }
+   public void Select_Weekly_periodicity() {
+	   Select s=new Select(driver.findElement(By.id("frequencyType")));
+		 s.selectByVisibleText("Weekly");
+   }
+   public void Select_Monthly_periodicity() {
+	   Select s=new Select(driver.findElement(By.id("frequencyType")));
+		 s.selectByVisibleText("Monthly");
+   }
+   public void Select_Quarterly_periodicity() {
+	   Select s=new Select(driver.findElement(By.id("frequencyType")));
+		 s.selectByVisibleText("Quarterly");
+   }
+   public void Select_Halfannually_periodicity() {
+	   Select s=new Select(driver.findElement(By.id("frequencyType")));
+		 s.selectByVisibleText("Half annually");
+   }
+   public void Select_Annually_periodicity() {
+	   Select s=new Select(driver.findElement(By.id("frequencyType")));
+		 s.selectByVisibleText("Annually");
+   }
+   public void Select_Cyclic_periodicity() {
+	   Select s=new Select(driver.findElement(By.id("frequencyType")));
+		 s.selectByVisibleText("Cyclic");
+   }
+   public WebElement Enter_Cyclic_Duration() {
+	   return driver.findElement(By.xpath("//input[@id='cycleDuration']"));
+   }
+   public WebElement Enter_Cyclic_StartDate() {
+	   return driver.findElement(By.xpath("//input[@id='cycleStartString']"));
+   }
+   public WebElement Enter_Cyclic_lable() {
+	   return driver.findElement(By.xpath("//input[@id='cycleLabel']"));
+   }
    public WebElement Has_A_Cutoff() {
 		 return driver.findElement(By.xpath("//input[@id='enableCutOff1']"));
    }
@@ -272,6 +309,11 @@ public class ProcessCreation {
 	  
 		 return driver.findElement(By.xpath("//a[contains(text(),'<<   Back to process list')]"));
    }
+
+
+
+
+
 
 	
 }

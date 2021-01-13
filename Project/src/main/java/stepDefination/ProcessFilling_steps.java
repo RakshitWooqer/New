@@ -104,4 +104,27 @@ public class ProcessFilling_steps
 	}
 }
 
+
+
+
+//
+//@Tuto
+//#Scenario3 User Login from Admin and to check Process report
+//Scenario:
+//When User enters the Nimish username
+//And User enters the Nimish password
+//And User clicks on the signin button
+//And User click on Reports tab
+//And User click on Process in Reports tab
+//And User search for the process in reports
+//
+//@Tuto
+//#Scenario2 User Login from Admin and to check Process report
+//Scenario:
+//When User enters the Nimish username
+//And User enters the Nimish password
+//And User clicks on the signin button
+//And User click on Reports tab
+//And User click on Process in Reports tab
+//And User search for the process in reports
 	

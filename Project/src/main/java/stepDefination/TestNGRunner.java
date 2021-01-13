@@ -19,7 +19,7 @@ import io.cucumber.testng.TestNGCucumberRunner;
 
 @CucumberOptions(
 
-		features= {".//src/main/java/stepDefination/Feature_file/DataCollectionProcess.feature"},
+		features= {".//src/main/java/stepDefination/Feature_file/DataCollection_Periodicity.feature"},
 
 glue = {"stepDefination"},
 
