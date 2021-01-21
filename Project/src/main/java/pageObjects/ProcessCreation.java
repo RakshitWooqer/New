@@ -71,11 +71,23 @@ public class ProcessCreation {
 		 return driver.findElement(By.xpath("//input[@id='group1']"));
    }
    
+   public WebElement processcoverageStore() {
+		 return driver.findElement(By.xpath("//input[@id='group2']"));
+ }
+   public WebElement processcoverageModule() {
+		 return driver.findElement(By.xpath("//input[@id='group3']"));
+ }
    public WebElement processcoverageUser() {
 		 return driver.findElement(By.xpath("//input[@id='group4']"));
    }
   
-  
+   public WebElement processcoverageProcess() {
+		 return driver.findElement(By.xpath("//input[@id='group6']"));
+   }
+
+   public WebElement processcoverageResource() {
+		 return driver.findElement(By.xpath("//input[@id='group7']"));
+   }
    public WebElement processcoverageclick() {
 		 return driver.findElement(By.xpath("//a[@id='selectGroupA']"));
    }
@@ -87,7 +99,10 @@ public class ProcessCreation {
    public WebElement SelectCoverage() {
 		 return driver.findElement(By.xpath("//a[@id='selectAll']"));
    }
-   
+   public WebElement Select_Module_click() {
+		 return driver.findElement(By.xpath("//a[text()='Select']"));
+   }
+
    public WebElement coveragedone() {
 		 return driver.findElement(By.xpath("//input[@value='Done']"));
    }

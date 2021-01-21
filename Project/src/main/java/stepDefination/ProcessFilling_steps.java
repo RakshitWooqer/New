@@ -75,8 +75,9 @@ public class ProcessFilling_steps
 	}
 	
 	@Then("^User click n submit button to submit")
-	public void Submit_btn() {
+	public void Submit_btn() throws InterruptedException {
 		PF.ProcessSubmitBtn_DC().click();
+		 Thread.sleep(5000);
 	}
 	
 	

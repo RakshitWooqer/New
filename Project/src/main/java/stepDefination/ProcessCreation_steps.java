@@ -73,6 +73,35 @@ public class ProcessCreation_steps
 		PC.processcoverageCity().click();
 		
 	}
+	@When("^User selects Store as coverage")
+	public void processcoverageStore() {
+		PC.processcoverageStore().click();
+		
+	}
+	
+	@When("^User selects User as coverage")
+	public void processcoverageUser() {
+		PC.processcoverageUser().click();
+	}
+	@When("^User selects Module as coverage")
+	public void processcoverageModule() {
+		PC.processcoverageModule().click();
+	}
+	
+	@When("^User click on select a module from list")
+	public void Select_Module_click() {
+		PC.Select_Module_click().click();
+		PC.coveragedone().click();
+	}
+	
+	@When("^User selects Process as coverage")
+	public void processcoverageProcess() {
+		PC.processcoverageProcess().click();
+	}
+	@When("^User selects Resource as coverage")
+	public void processcoverageResource() {
+		PC.processcoverageResource().click();
+	}
 	@When("^User open list coverages")
 	public void processcoverageclick() {
 		PC.processcoverageclick().click();

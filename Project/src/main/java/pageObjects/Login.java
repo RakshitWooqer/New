@@ -28,5 +28,8 @@ public class Login{
 	
 	public WebElement HomepageTitle() {
 		return driver.findElement(By.xpath("//div[contains(text(),'Home')]"));
-}
+	}
+	public void BrowserClose() {
+		driver.close();
+	}
 }

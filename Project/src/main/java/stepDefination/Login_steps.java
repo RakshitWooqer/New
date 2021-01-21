@@ -67,6 +67,14 @@ public class Login_steps
 		String title = login.HomepageTitle().getText();
 		System.out.println(title + " is Visible, Login succesfull");
 	
+	}
+	@When("^close the browser")
+	public void browserClose() {
+		Login login= new Login(driver);
+		login.BrowserClose();
+	}
+	
 }
-}
+	
+
 
