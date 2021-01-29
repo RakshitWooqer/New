@@ -84,7 +84,13 @@ public class ProcessCreation {
    public WebElement processcoverageProcess() {
 		 return driver.findElement(By.xpath("//input[@id='group6']"));
    }
-
+   
+   public WebElement SelectProcessforcoverage() {
+		 return driver.findElement(By.xpath("//a[@id='selectGroupA']"));
+   }
+   public WebElement SelectCityforProcessCoverage() {
+		 return driver.findElement(By.xpath("//a[@id='selectGroupSA']"));
+ }
    public WebElement processcoverageResource() {
 		 return driver.findElement(By.xpath("//input[@id='group7']"));
    }

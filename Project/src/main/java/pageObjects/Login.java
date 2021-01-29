@@ -14,16 +14,16 @@ public class Login{
 	}
 	
 	public WebElement usernameBTN() {
-		return driver.findElement(By.xpath("//input[@id='j_username']"));
+		return driver.findElement(By.xpath("//input[@id='username']"));
 	}
 	
 	public WebElement passwordBTN() {
-		return driver.findElement(By.xpath("//input[@id='j_password']"));
+		return driver.findElement(By.xpath("//input[@id='password']"));
 	}
 	
 	public void loginclk() {
 		
-		driver.findElement(By.xpath("//button[@id='loginSubImg1']")).click();
+		driver.findElement(By.xpath("//div[@id='loginSubImg1']")).click();
 	}
 	
 	public WebElement HomepageTitle() {

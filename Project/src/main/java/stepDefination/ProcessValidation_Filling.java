@@ -203,7 +203,7 @@ public class ProcessValidation_Filling
 	
 	@Then("^User check if process is submitted")
 	public void ProcessSubmission_ConfirmBox() throws InterruptedException {
-		Thread.sleep(6000);
+		Thread.sleep(20000);
 		PQ.ProcessSubmission_ConfirmBox();
 	}
 	

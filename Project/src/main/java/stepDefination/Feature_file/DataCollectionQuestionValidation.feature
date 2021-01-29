@@ -47,3 +47,4 @@ Scenario:
 	
 	And User click n submit button to submit
 	And User check if process is submitted
+	And close the browser

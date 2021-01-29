@@ -25,6 +25,27 @@ Scenario:
 	And User click on Add new Task DC
 	And User selects score type
 	And User Add question title
+	And User select Add another option
+	And User click on save question
+	And User selects short type
+	And User Add Short question title
+	And User click on save question
+	And User selects Descriptive type
+	And User Add Descriptive question title
+	And User click on save question
+	And User selects rating type
+	And User Add Rating question title
+	And User Add Rating Area should be rated
+	And User Add DC Rating Options
+	And User click on save question
+	And User selects MCSA type
+	And User Add MCSA question title
+	And User Add DC MCSA Options
+    And User click on save question 
+	And User selects MCMA type
+	And User Add MCMA question title
+	And User Add DC MCMA Options
+	And User select Add another option
 	And User click on save question
 	And User click on Process save button
 	And User click on Assign button
@@ -48,6 +69,13 @@ Scenario:
 	And User click on process in todo
 	And User click on Star button for DC process in todo
 	And User Fill the 1st score answer
+	And User Fill the 1st short answer
+	And User Fill the 1st Description answer
+	And User select options for 1st Rating
+	And User Fill the MCSA1 answer
+	And User Fill the MCMA1 answer
+	And User Fill the MCMA2 answer
+	
 	And User click n submit button to submit
 	And close the browser
 	
@@ -1869,8 +1897,8 @@ Scenario:
 	And User click on continue button
 	And User enters Process process objective
 	And User selects Process as coverage
-	And User open list coverages
-	And User click on select a module from list
+	And User selects Process for Process as coverage
+	And User selects City for Process as coverage
 	And User selects Weekly periodicity
 	And User save the process details
 	And User click on Add new Task DC
@@ -1899,7 +1927,6 @@ Scenario:
 	And User click on process in todo
 	And User click on Star button for DC process in todo
 	And User Fill the 1st score answer
-	And User click n submit button to submit
 	And close the browser
 	
 	
@@ -1920,8 +1947,8 @@ Scenario:
 	And User click on continue button
 	And User enters Process process objective
 	And User selects Process as coverage
-	And User open list coverages
-	And User click on select a module from list
+	And User selects Process for Process as coverage
+	And User selects City for Process as coverage
 	And User selects Monthly periodicity
 	And User save the process details
 	And User click on Add new Task DC
@@ -1977,7 +2004,6 @@ Scenario:
 	And User Fill the MCSA1 answer
 	And User Fill the MCMA1 answer
 	And User Fill the MCMA2 answer
-	And User click n submit button to submit
 	And close the browser
 	
 	
@@ -1998,8 +2024,8 @@ Scenario:
 	And User click on continue button
 	And User enters Process process objective
 	And User selects Process as coverage
-	And User open list coverages
-	And User click on select a module from list
+	And User selects Process for Process as coverage
+	And User selects City for Process as coverage
 	And User selects Quaterly periodicity
 	And User save the process details
 	And User click on Add new Task DC
@@ -2055,7 +2081,6 @@ Scenario:
 	And User Fill the MCSA1 answer
 	And User Fill the MCMA1 answer
 	And User Fill the MCMA2 answer
-	And User click n submit button to submit
 	And close the browser
 	
 	
@@ -2075,8 +2100,8 @@ Scenario:
 	And User click on continue button
 	And User enters Process process objective
 	And User selects Process as coverage
-	And User open list coverages
-	And User click on select a module from list
+	And User selects Process for Process as coverage
+	And User selects City for Process as coverage
 	And User selects Halfannually periodicity
 	And User save the process details
 	And User click on Add new Task DC
@@ -2132,7 +2157,6 @@ Scenario:
 	And User Fill the MCSA1 answer
 	And User Fill the MCMA1 answer
 	And User Fill the MCMA2 answer
-	And User click n submit button to submit
 	And close the browser
 	
 	
@@ -2154,8 +2178,8 @@ Scenario:
 	And User click on continue button
 	And User enters Process process objective
 	And User selects Process as coverage
-	And User open list coverages
-	And User click on select a module from list
+	And User selects Process for Process as coverage
+	And User selects City for Process as coverage
 	And User selects Annually periodicity
 	And User save the process details
 	And User click on Add new Task DC
@@ -2211,7 +2235,6 @@ Scenario:
 	And User Fill the MCSA1 answer
 	And User Fill the MCMA1 answer
 	And User Fill the MCMA2 answer
-	And User click n submit button to submit
 	And close the browser
 	
 	
@@ -2232,8 +2255,8 @@ Scenario:
 	And User click on continue button
 	And User enters Process process objective
 	And User selects Process as coverage
-	And User open list coverages
-	And User click on select a module from list
+	And User selects Process for Process as coverage
+	And User selects City for Process as coverage
 	And User selects Cyclic periodicity
 	And User enters Cyclic duration as 3
 	And User enters start date as today
@@ -2293,7 +2316,6 @@ Scenario:
 	And User Fill the MCSA1 answer
 	And User Fill the MCMA1 answer
 	And User Fill the MCMA2 answer
-	And User click n submit button to submit
 	And close the browser
 	
 	

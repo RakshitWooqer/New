@@ -60,7 +60,8 @@ public class ProcessCreation_steps
 			PC.Process_name().sendKeys(PC.ProcessName);
 	}
 	@When("^User click on continue button")
-	public void Process_continueBtn()  {
+	public void Process_continueBtn() throws InterruptedException  {
+		Thread.sleep(3000);
 		PC.Process_continueBtn().click();
 		
 	}
@@ -98,6 +99,19 @@ public class ProcessCreation_steps
 	public void processcoverageProcess() {
 		PC.processcoverageProcess().click();
 	}
+	@When("^User selects Process for Process as coverage")
+	public void selectprocessforcoverageProcess() {
+		PC.SelectProcessforcoverage().click();
+		PC.Select_Module_click().click();
+	}
+	
+	@When("^User selects City for Process as coverage")
+	public void selectcityforcoverageProcess() {
+		PC.SelectCityforProcessCoverage().click();
+		PC.Select_Module_click().click();
+	}
+	
+	
 	@When("^User selects Resource as coverage")
 	public void processcoverageResource() {
 		PC.processcoverageResource().click();
