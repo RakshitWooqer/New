@@ -325,7 +325,7 @@ public class ProcessCreation_steps
 	
 	@When("^User search for the assignee")
 	public void enter_search_bar() throws InterruptedException {
-		ProcessCreation.enter_search_bar("//input[@id='searchString']", "Gourav Chourasiya");
+		ProcessCreation.enter_search_bar("//input[@id='searchString']", "Nimish jain");
 		Thread.sleep(5000);
 	}
 	@When("^User click on assign for searched user")
@@ -348,6 +348,12 @@ public class ProcessCreation_steps
 	public void enter_Processsearch_bar() throws InterruptedException {
 		ProcessCreation.enter_search_bar("//input[@id='searchString']", PC.ProcessName);
 		Thread.sleep(5000);
+	}
+	@When("^User search for module as coverage")
+	public void enterModuleNAme_Processsearch_bar() throws InterruptedException {
+		Thread.sleep(2000);
+		ProcessCreation.enter_search_bar("//input[@id='searchString']", "7thFebDailyChecklistModule");
+		Thread.sleep(4000);
 	}
 	@When("^User click on change to activate process")
 	public void select_Change_btn() {
