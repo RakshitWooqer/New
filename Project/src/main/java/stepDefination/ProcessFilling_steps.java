@@ -43,6 +43,19 @@ public class ProcessFilling_steps
 	public void Click_AUDIT_Start_Btn() {
 		PF.AuditProcess_start().click();
 	}
+	@Then("^User click on Star button for Assess process in todo")
+	public void Click_Assess_Start_Btn() {
+		PF.AssessProcess_start().click();
+	}
+	@Then("^User click on Star confirm button for Assess process in todo")
+	public void Click_Assess_StartConfirm_Btn() {
+		PF.AssessProcess_startConfirm().click();
+	}
+	@Then("^User click on AssessProcess_ViewAll for Assess process in todo")
+	public void AssessProcess_ViewAll() throws InterruptedException {
+		Thread.sleep(4000);
+		PF.AssessProcess_ViewAll().click();
+	}
 	@Then("^User Fill the 1st score answer")
 	public void score1Dc() {
 		PF.AnswerScore1_DC().sendKeys("1");
@@ -81,7 +94,23 @@ public class ProcessFilling_steps
 	}
 	
 	
-	
+	@Then("^User selects for Yes as answer")
+	public void UserSelect_Yes_forChecklist() {
+		PF.UserSelect_Yes_forChecklist().click();
+	}
+	@Then("^User fill assess short")
+	public void Assessment_AnswerTextfield_Short() {
+		PF.Assessment_ShortAnswerTextfield().sendKeys("Short");
+	}
+	@Then("^User fill assess Desc")
+	public void Assessment_AnswerTextfield_Desc() {
+		PF.Assessment_DescAnswerTextfield().sendKeys("Desc");
+	}
+	@Then("^User click for next ques assess")
+	public void Assessment_AnswerNext() {
+		
+		PF.Assessment_AnswerNext().click();
+	}
 	///////////////////////////////////////////Report////////////////////////////////////////////////
 	@Then("^User click on Reports tab")
 	public void Reports_tab() {

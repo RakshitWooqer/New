@@ -41,6 +41,10 @@ public class ProcessCreation {
 	   return driver.findElement(By.xpath("//span[contains(text(),'Add New')]"));
 	   
    }
+   public WebElement Process_Type_Appraisal() {
+	    return driver.findElement(By.xpath("//input[@value='3']"));
+		
+   }
    public WebElement Process_Type_Audit() {
 	    return driver.findElement(By.xpath("//input[@value='2']"));
 		
@@ -48,8 +52,17 @@ public class ProcessCreation {
    public WebElement Process_Type_DC() {
 	    return driver.findElement(By.xpath("//input[@value='4']"));
 		
-  }
-	
+   }
+   public WebElement Process_Type_Checklist() {
+	    return driver.findElement(By.xpath("//input[@value='1']"));
+		
+   }
+   public WebElement Process_Type_Assessment() {
+		return driver.findElement(By.xpath("//input[@value='5']"));
+		
+   }
+   
+   
    public WebElement Process_name() {
 	    return driver.findElement(By.id("cn"));
 		
@@ -218,6 +231,18 @@ public class ProcessCreation {
 		 s.selectByVisibleText("Multiple Choice Multiple Answers");
    }
    
+   public WebElement Select_Checklist_CorrectAns1() {
+	   
+	   return driver.findElement(By.xpath("//div[@id='radioAnswers']/div[1]/label"));
+   }
+   public WebElement Select_Checklist_CorrectAns2() {
+	   
+	   return driver.findElement(By.xpath("//div[@id='radioAnswers']/div[2]/label"));
+   }
+   public WebElement Select_MCMA_CorrectAns1() {
+	   
+	   return driver.findElement(By.xpath("//div[@class='al-chk-btn clearfix']"));
+   }
    public WebElement Addmore_option() {
 	  
 	   return driver.findElement(By.id("id:addMore"));
@@ -331,10 +356,69 @@ public class ProcessCreation {
 		 return driver.findElement(By.xpath("//a[contains(text(),'<<   Back to process list')]"));
    }
 
+   public  WebElement Timedcheckbox_assess() {
+		  
+		 return driver.findElement(By.xpath("//input[@id='timedTest1']"));
+   }
+   
+   public  WebElement DurationTextbox_assess() {
+		  
+		 return driver.findElement(By.xpath("//input[@id='duration']"));
+   }
+   
+   public  WebElement MaxAttemptsTextbox_assess() {
+		  
+		 return driver.findElement(By.xpath("//input[@id='attempts']"));
+   }
+   
+   public  WebElement MaxMarksTextbox_assess() {
+		  
+		 return driver.findElement(By.xpath("//input[@id='maxMarks']"));
+   }
+   
+   public  WebElement ThresholdTextbox_assess() {
+		  
+		 return driver.findElement(By.xpath("//input[@id='passingCriteria']"));
+   }
 
-
-
-
-
+   public  WebElement ConfigureGearIcon_assess() {
+		  
+		 return driver.findElement(By.xpath("//tbody/tr[1]/td[2]/a[2]/img[1]"));
+   }
 	
+   public  WebElement Set_NumberOfQues_Assess() {
+		  
+		 return driver.findElement(By.xpath("//input[@id='numberOfQuestions']"));
+ }
+
+ public  WebElement Set_ScorePerQues_Assess() {
+		  
+		 return driver.findElement(By.xpath("//input[@id='marksQuestion']"));
+ }
+ 
+ public  WebElement Click_ApplyQuestionConfig_Assess() {
+	  
+	 return driver.findElement(By.xpath("//tbody/tr[5]/td[1]/input[1]"));
+}
+
+
+
+
+
+public WebElement ClickOnAsssign_Searched() {
+	return driver.findElement(By.xpath("//*[@id=\"row266\"]/td[5]/a"));
+	//return driver.findElement(By.xpath("//a[contains(text(),'Assign')]"));
+}
+
+public void SetEvaluator_Assess() {
+	 driver.findElement(By.xpath("//div[@class='eval-more-action-container']")).click();
+	 driver.findElement(By.xpath("//a[text()='Set evaluator']")).click();
+	 driver.findElement(By.xpath("//a[@class='selectEligibleUsers']")).click();
+	 driver.findElement(By.xpath("//a[@id='521255']")).click();
+	
+	//return driver.findElement(By.xpath("//a[contains(text(),'Assign')]"));
+}
+  
+
+
 }

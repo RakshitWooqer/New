@@ -40,6 +40,10 @@ public class ProcessCreation_steps
 		PC.Addnew_Btn().click();
 	}
 	
+	@When("^User select Appraisal type")
+	public void Process_Type_Appraisal() {
+		PC.Process_Type_Appraisal().click();
+	}
 	@When("^User select Audit type")
 	public void Process_Type_Audit() {
 		PC.Process_Type_Audit().click();
@@ -47,6 +51,10 @@ public class ProcessCreation_steps
 	@When("^User select DC type")
 	public void Process_Type_DC() {
 		PC.Process_Type_DC().click();
+	}
+	@When("^User select Checklist type")
+	public void Process_Type_Checklist() {
+		PC.Process_Type_Checklist().click();
 	}
 	
 	@When("^User enters Audit Process name")
@@ -57,6 +65,16 @@ public class ProcessCreation_steps
 	@When("^User enters DC Process name")
 	public void DC_ProcessName() {
 	PC.ProcessName =	"DC " + CS.getCurrentTimeStamp();
+			PC.Process_name().sendKeys(PC.ProcessName);
+	}
+	@When("^User enters Checklist Process name")
+	public void Checklist_ProcessName() {
+	PC.ProcessName =	"Checklist " + CS.getCurrentTimeStamp();
+			PC.Process_name().sendKeys(PC.ProcessName);
+	}
+	@When("^User enters Appraisal Process name")
+	public void Appraisal_ProcessName() {
+	PC.ProcessName =	"Appraisal " + CS.getCurrentTimeStamp();
 			PC.Process_name().sendKeys(PC.ProcessName);
 	}
 	@When("^User click on continue button")
@@ -188,6 +206,10 @@ public class ProcessCreation_steps
 	public void Has_A_Cutoff() {
 		PC.Has_A_Cutoff().click();
 	}
+	@When("^User selects EnableDataEdit")
+	public void EnableDataEdit() {
+		PC.EnableDataEdit().click();
+	}
 	@When("^User selects MultipleRecords")
 	public void MultipleRecords() {
 		PC.MultipleRecords().click();
@@ -201,6 +223,10 @@ public class ProcessCreation_steps
 	
 	@When("^User click on Add new Task Audit")
 	public void Add_newtask_Audit_Btn() {
+		PC.Add_newtaskAudit_Btn().click();
+	}
+	@When("^User click on Add new Question button")
+	public void Add_newQuestion_Btn() {
 		PC.Add_newtaskAudit_Btn().click();
 	}
 	@When("^User click on Add new Task DC")
@@ -314,6 +340,22 @@ public class ProcessCreation_steps
 		PC.Option_3().sendKeys("MCMA 3");
 	}
 
+	@When("^User Add Checklist question title")
+	public void Add_ChecklistTitle() {
+		PC.Add_QuestionTitle().sendKeys("Checklist type question");
+	}
+	@When("^User selects 1st as correct option")
+	public void Select_Checklist_CorrectAns1() {
+		PC.Select_Checklist_CorrectAns1().click();
+	}
+	@When("^User selects 2nd as correct option")
+	public void Select_Checklist_CorrectAns2() {
+		PC.Select_Checklist_CorrectAns2().click();
+	}
+	@When("^User selects 1st as correct option MCMA")
+	public void Select_MCMA_CorrectAns1() {
+		PC.Select_MCMA_CorrectAns1().click();
+	}
 	@When("^User click on Process save button")
 	public void Process_save_Btn() {
 		PC.Process_save_Btn().click();
@@ -363,7 +405,78 @@ public class ProcessCreation_steps
 	public void click_backToProcess() {
 		PC.click_backToProcess().click();
 		
+	}
+	@When("^User select Assessment type")
+	public void Process_Type_Assessment() {
+		PC.Process_Type_Assessment().click();
+	}
+	@When("^User enters Assessment Process name")
+	public void Assess_ProcessName() {
+	PC.ProcessName =	"Assess " + CS.getCurrentTimeStamp();
+			PC.Process_name().sendKeys(PC.ProcessName);
+	}
 	
+	@When("^User click on Timedcheckbox")
+	public void click_Timedcheckbox_assess() {
+		PC.Timedcheckbox_assess().click();
+	}
+	
+	@When("^User set 2 min as Duration time for assess")
+	public void click_DurationTextbox_assess() { 
+		PC.DurationTextbox_assess().sendKeys("2");
+	}
+
+	@When("^User set MaxAttempts as 10")
+	public void MaxAttemptsTextbox_assess() { 
+		PC.MaxAttemptsTextbox_assess().sendKeys("10");
+	}
+	
+
+	@When("^User set Maximum Marks as 4")
+	public void MaxMarksTextbox_assess() { 
+		PC.MaxMarksTextbox_assess().sendKeys("4");
+	}
+	
+	@When("^User set Threshold as 50%")
+	public void ThresholdTextbox_assess() { 
+		
+		PC.ThresholdTextbox_assess().sendKeys("50");
+	}
+	
+	@When("^User clicks on gear icon to set question properties")
+	public void ConfigureGearIcon_assess() { 
+		PC.ConfigureGearIcon_assess().click();
+	}
+	@When("^User set no. of questions")
+	public void Set_NumberOfQues_Assess() { 
+		PC.Set_NumberOfQues_Assess().clear();
+		PC.Set_NumberOfQues_Assess().sendKeys("4");
+	}
+	
+	@When("^User set score per question")
+	public void Set_ScorePerQues_Assess() { 
+		PC.Set_ScorePerQues_Assess().clear();
+		PC.Set_ScorePerQues_Assess().sendKeys("1");
+	}
+	
+	@When("^User clicks on apply for question config")
+	public void Click_ApplyQuestionConfig_Assess() throws InterruptedException { 
+		Thread.sleep(3000);
+		PC.Click_ApplyQuestionConfig_Assess().click();
+	}
+	
+	@When("^User search for the Analysts role")
+	public void enterRole_search_bar() throws InterruptedException {
+		ProcessCreation.enter_search_bar("//input[@id='assignSearch']", "Analysts");
+		Thread.sleep(5000);
+	}
+	@When("^User clicks on assign for the searched person")
+	public void ClickOnAsssign_Searched() { 
+		PC.ClickOnAsssign_Searched().click();
+	}
+	@When("^User Set Evaluator for Assess")
+	public void SetEvaluator_Assess() { 
+		PC.SetEvaluator_Assess();
 	}
 	
 }

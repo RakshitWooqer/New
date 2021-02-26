@@ -47,11 +47,6 @@ public class ProcessFilling {
 	   
    }
    
-   
-   
-   
-   
-   
    public WebElement DCProcess_start() {
 		
 	   return driver.findElement(By.xpath("//*[@class='start-tdo'][text()='Start ']"));
@@ -61,6 +56,26 @@ public class ProcessFilling {
 		
 	   return driver.findElement(By.xpath("//button[@class='start-tdo'][contains(.,'Start')]"));
 	   
+   }
+   public WebElement AssessProcess_start() {
+		
+	   return driver.findElement(By.xpath("//button[@class='start-tdo start-tdo-assessment'][contains(.,'Start')]"));
+	   
+   }
+   public WebElement AssessProcess_startConfirm() {
+		
+	   return driver.findElement(By.xpath("//button[@class='start-assm-btn']"));
+	      
+   }
+   public WebElement AssessProcess_ViewAll() {
+		
+	   return driver.findElement(By.xpath("//*[@id=\"expTile5\"]/div[3]/div[2]/div[2]/div[2]/div[1]/label"));
+	      
+   }
+   public WebElement AssessProcess_ViewOnceAtTime() {
+		
+	   return driver.findElement(By.xpath("//*[text()='View one at a time']"));
+	      
    }
    public WebElement AnswerScore1_DC() {
 		
@@ -118,8 +133,32 @@ public class ProcessFilling {
 	   
    }
    
-   
-   
+
+   public WebElement UserSelect_Yes_forChecklist() {
+		
+	   return driver.findElement(By.xpath("//label[contains(text(),'Yes')]"));
+	   
+   }
+   public WebElement UserSelect_No_forChecklist() {
+		
+	   return driver.findElement(By.xpath("//label[contains(text(),'No')]"));
+	   
+   }
+   public WebElement Assessment_ShortAnswerTextfield() {
+		
+	   return driver.findElement(By.xpath("(//textarea[contains(@name,'qt')])[1]"));
+	   
+   }
+   public WebElement Assessment_DescAnswerTextfield() {
+		
+	   return driver.findElement(By.xpath("((//textarea[contains(@name,'qt')])[2]"));
+	   
+   }
+   public WebElement Assessment_AnswerNext() {
+		
+	   return driver.findElement(By.xpath("//button[contains(text(),'Next')]"));
+	   
+   }
 	///////////////////////////////////////////Report////////////////////////////////////////////////
    
    public WebElement ReportsTab() {

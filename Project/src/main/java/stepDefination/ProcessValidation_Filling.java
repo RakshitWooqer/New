@@ -1,4 +1,4 @@
-package stepDefination;
+  package stepDefination;
 
 import java.io.InterruptedIOException;
 import java.util.concurrent.TimeUnit;
@@ -33,6 +33,11 @@ public class ProcessValidation_Filling
 		PQ.Click_Process_TodoPage("DC short validation");
 	}
 	
+	@Then("^User click on Audit short validation process in todo")
+	public void ClickOnAuditProcess_TodoPage() throws InterruptedException {
+		Thread.sleep(8000);
+		PQ.Click_Process_TodoPage("Audit short validation web");
+	}
 	
 	@Then("^User Fill Short with text validation Incorrect data")
 	public void shortText_Incorrect() {
@@ -120,9 +125,14 @@ public class ProcessValidation_Filling
 	//////////////////////
 	
 
-	@Then("^User Fill Short with Length validation Incorrect data")
-	public void shortLength_Incorrect() {
-		PQ.Answer_6().sendKeys("Testing more than 10 characters");
+	@Then("^User Fill Short with Length validation lower than minimum")
+	public void shortLength_Incorrect_Min() {
+		PQ.Answer_6().sendKeys("Test");
+	}
+	@Then("^User Fill Short with Length validation More than Maximum")
+	public void shortLength_Incorrect_Max() {
+		PQ.Answer_6().clear();
+		PQ.Answer_6().sendKeys("Test");
 	}
 	@Then("^User Fill Short with Length validation correct data")
 	public void shortLength_Correct() {
