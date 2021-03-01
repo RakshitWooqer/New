@@ -151,12 +151,17 @@ public class ProcessFilling {
    }
    public WebElement Assessment_DescAnswerTextfield() {
 		
-	   return driver.findElement(By.xpath("((//textarea[contains(@name,'qt')])[2]"));
+	   return driver.findElement(By.xpath("(//textarea[contains(@name,'qt')])[2]"));
 	   
    }
    public WebElement Assessment_AnswerNext() {
 		
 	   return driver.findElement(By.xpath("//button[contains(text(),'Next')]"));
+	   
+   }
+   public WebElement Assessment_Submitbtn() {
+		
+	   return driver.findElement(By.xpath("(//div[contains(text(),'Submit')])[2]"));
 	   
    }
 	///////////////////////////////////////////Report////////////////////////////////////////////////

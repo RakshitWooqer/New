@@ -108,8 +108,12 @@ public class ProcessFilling_steps
 	}
 	@Then("^User click for next ques assess")
 	public void Assessment_AnswerNext() {
-		
 		PF.Assessment_AnswerNext().click();
+	}
+	@Then("^User click submit for assess")
+	public void Assessment_Submitbtn() throws InterruptedException {
+		PF.Assessment_Submitbtn().click();
+		Thread.sleep(5000);
 	}
 	///////////////////////////////////////////Report////////////////////////////////////////////////
 	@Then("^User click on Reports tab")

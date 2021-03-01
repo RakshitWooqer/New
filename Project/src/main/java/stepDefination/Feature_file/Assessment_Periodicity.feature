@@ -66,7 +66,7 @@ Scenario:
 	And User Fill the MCSA1 answer
 	And User Fill the MCMA1 answer
 	And User Fill the MCMA2 answer
-	And User click n submit button to submit
+	And User click submit for assess
 	And close the browser
 	
 	@Tuto
@@ -134,7 +134,7 @@ Scenario:
 	And User Fill the MCSA1 answer
 	And User Fill the MCMA1 answer
 	And User Fill the MCMA2 answer
-	And User click n submit button to submit
+	And User click submit for assess
 	And close the browser
 	
 
@@ -203,7 +203,7 @@ When User enters the Gourav username
 	And User Fill the MCSA1 answer
 	And User Fill the MCMA1 answer
 	And User Fill the MCMA2 answer
-	And User click n submit button to submit
+	And User click submit for assess
 	And close the browser
 	
 	
@@ -273,7 +273,7 @@ When User enters the Gourav username
 	And User Fill the MCSA1 answer
 	And User Fill the MCMA1 answer
 	And User Fill the MCMA2 answer
-	And User click n submit button to submit
+	And User click submit for assess
 	And close the browser
 	
 	
@@ -344,5 +344,5 @@ When User enters the Gourav username
 	And User Fill the MCSA1 answer
 	And User Fill the MCMA1 answer
 	And User Fill the MCMA2 answer
-	And User click n submit button to submit
+	And User click submit for assess
 	And close the browser
