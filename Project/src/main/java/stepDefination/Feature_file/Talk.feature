@@ -1,13 +1,13 @@
 Feature: Tuto
 
 Background: User navigates to Tuto
-	Given  I am on tuto homepage
+	Given  I am on QA homepage
 	
 	@Tuto
 	#Scenario User creates a talk with one user
 Scenario:
-	When User enters the username
-	And User enters the password
+	When User enters the Nimish username
+	And User enters the Nimish password
 	And User clicks on the signin button
 	And User click on the Talk Button
 	And User enter the text on the talk page
@@ -15,7 +15,8 @@ Scenario:
 	And User selects the user from the drop down
 	And User click on the share button
 	And User click on the profile icon
-	Then User click on signout button
+	And User click on signout button
+	And close the browser
 	
 	@Tuto
 	#Scenario Assigned user verifies,endorse,comment,conclude the task
@@ -30,12 +31,12 @@ Scenario:
 	And User clicks on the Endore button and endorse the talk
 	And User click on the profile icon
 	And User click on signout button
-	And  User enters the username
-	And User enters the password
+	And User enters the Nimish username
+	And User enters the Nimish password
 	And User clicks on the signin button
 	And User click on the Talk Button
 	And User clicks on the conclude button
 	And User conclude the task with the comment
 	And User enters the conclude message
 	And User clicks on the conclude button at the bottom of the conclude section
-	
+	And close the browser

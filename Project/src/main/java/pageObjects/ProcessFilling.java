@@ -177,6 +177,12 @@ public class ProcessFilling {
 	   return driver.findElement(By.xpath("//*[text()='Process']"));
 	   
    }
+   public WebElement Analyze_btn(String processName) {
+		
+	   return driver.findElement(By.xpath("//td[contains(text(),'"+processName+"')]/following-sibling::td[4]/*[@class='reportClick']"));
+	   
+   }
+ 
    
    public void ProcessSearchClick_reports() {
 			WebElement table = driver.findElement(By.xpath("//table[@class='paddedTable']"));

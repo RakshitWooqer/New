@@ -330,8 +330,6 @@ public class ProcessCreation_steps
 		PC.Weightage_1().sendKeys("1");
 		PC.Option_2().sendKeys("MCMA 2");
 		PC.Weightage_2().sendKeys("1");
-		PC.Option_3().sendKeys("MCMA 2");
-		PC.Weightage_3().sendKeys("1");
 	}
 	@When("^User Add DC MCMA Options")
 	public void Add_DCMCMAOptions() {

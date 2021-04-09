@@ -68,12 +68,31 @@ public class Login_steps
 		System.out.println(title + " is Visible, Login succesfull");
 	
 	}
+	
+	@When("^User clicks on the manage Pi tab")
+	public void managePi() {
+		Login login= new Login(driver);
+		login.managePi().click();
+	}
 	@When("^close the browser")
 	public void browserClose() {
 		Login login= new Login(driver);
 		login.BrowserClose();
 	}
 	
+	@When("^User enters the mobileautomation username")
+	public void clickusernamemobileautomation() throws InterruptedException {
+		Login login = new Login(driver);
+		login.usernameBTN().sendKeys("mobileautomation@gmail.com");
+	}
+	
+	@When("^User enters the mobileautomation password")
+	public void enterpasswordmobileautomation() throws InterruptedException {
+		Login login = new Login(driver);
+		login.passwordBTN().sendKeys("Wooqer@123");
+		Thread.sleep(2000);
+		
+	}
 }
 	
 
