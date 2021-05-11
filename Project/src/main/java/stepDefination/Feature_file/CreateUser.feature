@@ -21,3 +21,5 @@ Scenario:
 	And User selects Media ManagementRights checkbox
 	And User selects User ManagementRights checkbox
 	And User click on save user button
+	
+	And close the browser

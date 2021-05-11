@@ -22,3 +22,5 @@ Scenario:
 	And User select city from Dropdown
 	And User fill on Zip of new store
 	And User click on SaveStore
+	
+	And close the browser

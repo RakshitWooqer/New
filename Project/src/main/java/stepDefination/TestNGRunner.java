@@ -19,7 +19,7 @@ import io.cucumber.testng.TestNGCucumberRunner;
 
 @CucumberOptions(
 
-		features= {".//src/main/java/stepDefination/Feature_file/Task.feature"},
+		features= {".//src/main/java/stepDefination/Feature_file/ChapterModule.feature"},
 
 glue = {"stepDefination"},
 
